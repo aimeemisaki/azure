@@ -56,91 +56,91 @@ _プロジェクト_
 
 _ストレージアカウント_
 
-- [ストレージアカウント](/labs/storage/README.md)
-- [Blob ストレージ](/labs/storage-blob/README.md)
-- [ファイルシェア](/labs/storage-files/README.md)
-- [静的 Web コンテンツ用のストレージの使用](/labs/storage-static/README.md)
-- [テーブルストレージの利用](/labs/storage-table/README.md)
+- 🇯🇵[ストレージアカウント](/labs/storage/README_jp.md)
+- 🇯🇵[Blob ストレージ](/labs/storage-blob/README_jp.md)
+- 🇯🇵[ファイルシェア](/labs/storage-files/README_jp.md)
+- 🇯🇵[静的 Web コンテンツ用のストレージの使用](/labs/storage-static/README_jp.md)
+- 🇯🇵[テーブルストレージの利用](/labs/storage-table/README_jp.md)
 
 _Cosmos DB_
 
-- [Cosmos DB](/labs/cosmos/README.md)
-- [Mongo API を使用した Cosmos DB](/labs/cosmos-mongo/README.md)
-- [Table API を使用した Cosmos DB](/labs/cosmos-table/README.md)
-- [Cosmos DB のパフォーマンスと課金](/labs/cosmos-perf/README.md)
+- 🇯🇵[Cosmos DB](/labs/cosmos/README_jp.md)
+- 🇯🇵[Mongo API を使用した Cosmos DB](/labs/cosmos-mongo/README_jp.md)
+- 🇯🇵[Table API を使用した Cosmos DB](/labs/cosmos-table/README_jp.md)
+- 🇯🇵[Cosmos DB のパフォーマンスと課金](/labs/cosmos-perf/README_jp.md)
 
 
 
 _KeyVault と仮想ネットワーク_
 
-- [KeyVault](/labs/keyvault/README.md)
-- [仮想ネットワーク](/labs/vnet/README.md)
-- [KeyVault アクセスのセキュリティ](/labs/keyvault-access/README.md)
-- [VNet アクセスのセキュリティ](/labs/vnet-access/README.md)
-- [KeyVault と VNet を使用したアプリのセキュリティ](/labs/vnet-apps/README.md)
+- 🇯🇵[KeyVault](/labs/keyvault/README_jp.md)
+- 🇯🇵[仮想ネットワーク](/labs/vnet/README_jp.md)
+- 🇯🇵[KeyVault アクセスのセキュリティ](/labs/keyvault-access/README_jp.md)
+- 🇯🇵[VNet アクセスのセキュリティ](/labs/vnet-access/README_jp.md)
+- 🇯🇵[KeyVault と VNet を使用したアプリのセキュリティ](/labs/vnet-apps/README_jp.md)
 
 _イベントとメッセージ_
 
-- [Service Bus キュー](/labs/servicebus/README.md)
-- [Service Bus トピック](/labs/servicebus-pubsub/README.md)
-- [Event Hubs](/labs/eventhubs/README.md)
-- [分割された消費者を持つ Event Hubs](/labs/eventhubs-consumers/README.md)
-- [Azure Cache for Redis](/labs/redis/README.md)
+- 🇯🇵[Service Bus キュー](/labs/servicebus/README_jp.md)
+- 🇯🇵[Service Bus トピック](/labs/servicebus-pubsub/README_jp.md)
+- 🇯🇵[Event Hubs](/labs/eventhubs/README_jp.md)
+- 🇯🇵[分割された消費者を持つ Event Hubs](/labs/eventhubs-consumers/README_jp.md)
+- 🇯🇵[Azure Cache for Redis](/labs/redis/README_jp.md)
 
 _プロジェクト_
 
-- [プロジェクト 2: 分散アプリ](/projects/distributed/README.md)
+- 🇯🇵[プロジェクト 2: 分散アプリ](/projects/distributed/README_jp.md)
 
 ## コンピュートとコンテナ
 
 _Docker と Azure コンテナ インスタンス_
 
-- [Docker 101](/labs/docker/README.md)
-- [Docker イメージと Azure コンテナ レジストリ](/labs/acr/README.md)
-- [Azure コンテナ インスタンス](/labs/aci/README.md)
-- [Docker Compose を使用した分散アプリ](/labs/docker-compose/README.md)
-- [ACI を使用した分散アプリ](/labs/aci-compose/README.md)
+- 🇯🇵[Docker 101](/labs/docker/README_jp.md)
+- 🇯🇵[Docker イメージと Azure コンテナ レジストリ](/labs/acr/README_jp.md)
+- 🇯🇵[Azure コンテナ インスタンス](/labs/aci/README_jp.md)
+- 🇯🇵[Docker Compose を使用した分散アプリ](/labs/docker-compose/README_jp.md)
+- 🇯🇵[ACI を使用した分散アプリ](/labs/aci-compose/README_jp.md)
 
 _Kubernetes_
 
-- [ノード](/labs/kubernetes/nodes/README.md)
-- [ポッド](/labs/kubernetes/pods/README.md)
-- [サービス](/labs/kubernetes/services/README.md)
-- [デプロイメント](/labs/kubernetes/deployments/README.md)
-- [ConfigMaps](/labs/kubernetes/configmaps/README.md)
-- [Azure Kubernetes サービス](/labs/aks/README.md)
+- 🇯🇵[ノード](/labs/kubernetes/nodes/README_jp.md)
+- 🇯🇵[ポッド](/labs/kubernetes/pods/README_jp.md)
+- 🇯🇵[サービス](/labs/kubernetes/services/README_jp.md)
+- 🇯🇵[デプロイメント](/labs/kubernetes/deployments/README_jp.md)
+- 🇯🇵[ConfigMaps](/labs/kubernetes/configmaps/README_jp.md)
+- 🇯🇵[Azure Kubernetes サービス](/labs/aks/README_jp.md)
 
 _中級 Kubernetes_
 
-- [PersistentVolumes](/labs/kubernetes/persistentvolumes/README.md)
-- [AKS PersistentVolumes](/labs/aks-persistentvolumes/README.md)
-- [Ingress](/labs/kubernetes/ingress/README.md)
-- [Application Gateway Ingress Controller を使用した AKS](/labs/aks-ingress/README.md)
-- [コンテナプローブ](/labs/kubernetes/containerprobes/README.md)
-- [トラブルシューティング](/labs/kubernetes/troubleshooting/README.md)
+- 🇯🇵[PersistentVolumes](/labs/kubernetes/persistentvolumes/README_jp.md)
+- 🇯🇵[AKS PersistentVolumes](/labs/aks-persistentvolumes/README_jp.md)
+- 🇯🇵[Ingress](/labs/kubernetes/ingress/README_jp.md)
+- 🇯🇵[Application Gateway Ingress Controller を使用した AKS](/labs/aks-ingress/README_jp.md)
+- 🇯🇵[コンテナプローブ](/labs/kubernetes/containerprobes/README_jp.md)
+- 🇯🇵[トラブルシューティング](/labs/kubernetes/troubleshooting/README_jp.md)
 
 _AKS インテグレーション_
 
-- [名前空間](/labs/kubernetes/namespaces/README.md)
-- [シークレット](/labs/kubernetes/secrets/README.md)
-- [KeyVault シークレットを使用した AKS](/labs/aks-keyvault/README.md)
-- [Helm](/labs/kubernetes/helm/README.md)
-- [KeyVault と VNet を使用した AKS アプリのセキュリティ](/labs/aks-apps/README.md)
+- 🇯🇵[名前空間](/labs/kubernetes/namespaces/README_jp.md)
+- 🇯🇵[シークレット](/labs/kubernetes/secrets/README_jp.md)
+- 🇯🇵[KeyVault シークレットを使用した AKS](/labs/aks-keyvault/README_jp.md)
+- 🇯🇵[Helm](/labs/kubernetes/helm/README_jp.md)
+- 🇯🇵[KeyVault と VNet を使用した AKS アプリのセキュリティ](/labs/aks-apps/README_jp.md)
 
 _プロジェクト_
 
-- [プロジェクト 3: コンテナライズされたアプリ](/projects/containerized/README.md)
+- 🇯🇵[プロジェクト 3: コンテナライズされたアプリ](/projects/containerized/README_jp.md)
 
 ## サーバーレスとアプリ管理
 
 _Azure 関数_
 
-- [HTTP トリガー](/labs/functions/http/README.md)
-- [タイマートリガー & blob 出力](/labs/functions/timer/README.md)
-- [Blob トリガー & SQL 出力](/labs/functions/blob/README.md)
-- [Service Bus トリガー & 複数の出力](/labs/functions/servicebus/README.md)
-- [RabbitMQ トリガー & blob 出力](/labs/functions/rabbitmq/README.md)
-- [CosmosDB トリガー & 出力](/labs/functions/cosmos/README.md)
+- 🇯🇵[HTTP トリガー](/labs/functions/http/README_jp.md)
+- 🇯🇵[タイマートリガー & blob 出力](/labs/functions/timer/README_jp.md)
+- 🇯🇵[Blob トリガー & SQL 出力](/labs/functions/blob/README_jp.md)
+- 🇯🇵[Service Bus トリガー & 複数の出力](/labs/functions/servicebus/README_jp.md)
+- 🇯🇵[RabbitMQ トリガー & blob 出力](/labs/functions/rabbitmq/README_jp.md)
+- 🇯🇵[CosmosDB トリガー & 出力](/labs/functions/cosmos/README_jp.md)
 
 _デュラブルファンクション_
 
