@@ -27,13 +27,15 @@
     "resources": [
         {
             "type": "Microsoft.Network/networkSecurityGroups",
-            "apiVersion": "2020-11-01",
+            "apiVersion": "2023-06-01",
             "name": "[parameters('networkSecurityGroups_vm01NSG_name')]",
-            "location": "eastus",
+            "location": "canadacentral",
             "properties": {
                 "securityRules": [
                     {
                         "name": "default-allow-ssh",
+                        "id": "[resourceId('Microsoft.Network/networkSecurityGroups/securityRules', parameters('networkSecurityGroups_vm01NSG_name'), 'default-allow-ssh')]",
+                        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
                         "properties": {
                             "protocol": "Tcp",
                             "sourcePortRange": "*",
@@ -54,53 +56,54 @@
         },
         {
             "type": "Microsoft.Network/publicIPAddresses",
-            "apiVersion": "2020-11-01",
+            "apiVersion": "2023-06-01",
             "name": "[parameters('publicIPAddresses_vm01PublicIP_name')]",
-            "location": "eastus",
+            "location": "canadacentral",
             "sku": {
-                "name": "Basic",
+                "name": "Standard",
                 "tier": "Regional"
             },
             "properties": {
-                "ipAddress": "20.124.178.130",
+                "ipAddress": "20.63.61.250",
                 "publicIPAddressVersion": "IPv4",
-                "publicIPAllocationMethod": "Dynamic",
+                "publicIPAllocationMethod": "Static",
                 "idleTimeoutInMinutes": 4,
                 "ipTags": []
             }
         },
         {
             "type": "Microsoft.Network/virtualNetworks",
-            "apiVersion": "2020-11-01",
+            "apiVersion": "2023-06-01",
             "name": "[parameters('virtualNetworks_vnet1_name')]",
-            "location": "eastus",
+            "location": "canadacentral",
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
                         "10.10.0.0/16"
                     ]
                 },
-                "dhcpOptions": {
-                    "dnsServers": []
-                },
                 "subnets": [
                     {
                         "name": "frontend",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_vnet1_name'), 'frontend')]",
                         "properties": {
                             "addressPrefix": "10.10.1.0/24",
                             "delegations": [],
-                            "privateEndpointNetworkPolicies": "Enabled",
+                            "privateEndpointNetworkPolicies": "Disabled",
                             "privateLinkServiceNetworkPolicies": "Enabled"
-                        }
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
                     },
                     {
                         "name": "backend",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_vnet1_name'), 'backend')]",
                         "properties": {
                             "addressPrefix": "10.10.2.0/24",
                             "delegations": [],
-                            "privateEndpointNetworkPolicies": "Enabled",
+                            "privateEndpointNetworkPolicies": "Disabled",
                             "privateLinkServiceNetworkPolicies": "Enabled"
-                        }
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
                     }
                 ],
                 "virtualNetworkPeerings": [],
@@ -109,31 +112,30 @@
         },
         {
             "type": "Microsoft.Compute/virtualMachines",
-            "apiVersion": "2021-11-01",
+            "apiVersion": "2023-03-01",
             "name": "[parameters('virtualMachines_vm01_name')]",
-            "location": "eastus",
+            "location": "canadacentral",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm01VMNic_name'))]"
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_DS1_v2"
+                    "vmSize": "Standard_D2s_v3"
                 },
                 "storageProfile": {
                     "imageReference": {
                         "publisher": "Canonical",
-                        "offer": "UbuntuServer",
-                        "sku": "18.04-LTS",
+                        "offer": "0001-com-ubuntu-server-jammy",
+                        "sku": "22_04-lts",
                         "version": "latest"
                     },
                     "osDisk": {
                         "osType": "Linux",
-                        "name": "[concat(parameters('virtualMachines_vm01_name'), '_disk1_727007c1d42848fc8066740606d06a93')]",
+                        "name": "[concat(parameters('virtualMachines_vm01_name'), '_disk1_9174c108c5e84c90a91ba9d6ce76265c')]",
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
-                            "storageAccountType": "Premium_LRS",
-                            "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_vm01_name'), '_disk1_727007c1d42848fc8066740606d06a93'))]"
+                            "storageAccountType": "Premium_LRS"
                         },
                         "deleteOption": "Detach",
                         "diskSizeGB": 30
@@ -142,14 +144,14 @@
                 },
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_vm01_name')]",
-                    "adminUsername": "siddhesh",
+                    "adminUsername": "aimi.ishida",
                     "linuxConfiguration": {
                         "disablePasswordAuthentication": true,
                         "ssh": {
                             "publicKeys": [
                                 {
-                                    "path": "/home/siddhesh/.ssh/authorized_keys",
-                                    "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8EkfdCDwDcLbu35gB0RA0GO+uL1wV2m/11/i+EXtsd7XKrpAN82vnJph5G+ZOwxdXvYEdnksoKf012NoKciEBuWpbODlCwK+OeDy9C7KZFtc8xsFsrSTPAGNaUEBBHtXaWsBk3iQW7KjrUxbBPkXtI2PD0aGbnxH6vlOadphOm0rOaFCltPAp6CxBN5i2HMbg2L89Zar/0jWIm24xi9Tl4aUQRbhh3KAQTYCCxRelRaNi0Un9xZSdt+NKZf+7NOGdJiW5mwXHLjVTbTsBiopRhOCQADdAxIK9bmPFvZ4vHO/YFrY2h0GbL2TsKqjAFOpcjSFGRT0K6yNYV6P9clWj siddhesh@sc-win10-i7\n"
+                                    "path": "/home/aimi.ishida/.ssh/authorized_keys",
+                                    "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9dTakNy7Jqg5gGMgCSnjPTpmb0McjWvZ5bPXI/TeYGmPRkofa4FsDlL7Pf/xPQ34Qo0wIS5eDU9TZ9+1/Ak7iq0g1J2Nzd6lT1MjrbgZ4n2pGH6+eqggrSF/KeRtwUQH2trxQKSR2mli6P2XIyEOXdeaYuNiGhRKsKDdGemftzyBafAZdg5dDVMJNWglpCo3Kk1weblC8QBZwNvpyLGXbL7+KeW5zpnOPyqgSccc72b6795v4xXNLdwKmA3ZbTNrjgi8/SR1skDnYOIk9jxoNCfUEig6Py6Jcpd22tAnvpC0UN9aeKOUACo3aQSiMAQpBPSJKDxWADUbiQtSbHZz7"
                                 }
                             ]
                         },
@@ -157,11 +159,11 @@
                         "patchSettings": {
                             "patchMode": "ImageDefault",
                             "assessmentMode": "ImageDefault"
-                        }
+                        },
+                        "enableVMAgentPlatformUpdates": false
                     },
                     "secrets": [],
-                    "allowExtensionOperations": true,
-                    "requireGuestProvisionSignal": true
+                    "allowExtensionOperations": true
                 },
                 "networkProfile": {
                     "networkInterfaces": [
@@ -174,7 +176,7 @@
         },
         {
             "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-            "apiVersion": "2020-11-01",
+            "apiVersion": "2023-06-01",
             "name": "[concat(parameters('networkSecurityGroups_vm01NSG_name'), '/default-allow-ssh')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_vm01NSG_name'))]"
@@ -196,7 +198,7 @@
         },
         {
             "type": "Microsoft.Network/virtualNetworks/subnets",
-            "apiVersion": "2020-11-01",
+            "apiVersion": "2023-06-01",
             "name": "[concat(parameters('virtualNetworks_vnet1_name'), '/backend')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_vnet1_name'))]"
@@ -204,13 +206,13 @@
             "properties": {
                 "addressPrefix": "10.10.2.0/24",
                 "delegations": [],
-                "privateEndpointNetworkPolicies": "Enabled",
+                "privateEndpointNetworkPolicies": "Disabled",
                 "privateLinkServiceNetworkPolicies": "Enabled"
             }
         },
         {
             "type": "Microsoft.Network/virtualNetworks/subnets",
-            "apiVersion": "2020-11-01",
+            "apiVersion": "2023-06-01",
             "name": "[concat(parameters('virtualNetworks_vnet1_name'), '/frontend')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_vnet1_name'))]"
@@ -218,25 +220,30 @@
             "properties": {
                 "addressPrefix": "10.10.1.0/24",
                 "delegations": [],
-                "privateEndpointNetworkPolicies": "Enabled",
+                "privateEndpointNetworkPolicies": "Disabled",
                 "privateLinkServiceNetworkPolicies": "Enabled"
             }
         },
         {
             "type": "Microsoft.Network/networkInterfaces",
-            "apiVersion": "2020-11-01",
+            "apiVersion": "2023-06-01",
             "name": "[parameters('networkInterfaces_vm01VMNic_name')]",
-            "location": "eastus",
+            "location": "canadacentral",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_vm01PublicIP_name'))]",
                 "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_vnet1_name'), 'frontend')]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_vm01NSG_name'))]"
             ],
+            "kind": "Regular",
             "properties": {
                 "ipConfigurations": [
                     {
                         "name": "ipconfigvm01",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_vm01VMNic_name')), '/ipConfigurations/ipconfigvm01')]",
+                        "etag": "W/\"1cb55670-1db7-403d-a104-9fa99c8377d4\"",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
                         "properties": {
+                            "provisioningState": "Succeeded",
                             "privateIPAddress": "10.10.1.4",
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
@@ -255,9 +262,13 @@
                 },
                 "enableAcceleratedNetworking": false,
                 "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
                 "networkSecurityGroup": {
                     "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_vm01NSG_name'))]"
-                }
+                },
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
             }
         }
     ]

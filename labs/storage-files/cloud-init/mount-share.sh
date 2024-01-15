@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # *** replace these with your actual SA name and key:
-ACCOUNT_NAME='<sa-name>'
-ACCOUNT_KEY='<sa-key>'
+ACCOUNT_NAME='afsaimi'
+ACCOUNT_KEY='uYseYEyK6f0THDyJJ7CzeQpu5G54e30bqBr076tqgg1NkGN0M6jn4pW74XGvGoej5GFND0akx4Yp+AStS8mwbw=='
 # ***
 
 CONTAINER_NAME='labs'
