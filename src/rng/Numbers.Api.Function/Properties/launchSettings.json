@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "profiles": {
     "rng_api_fn": {
@@ -6,4 +7,14 @@
       "launchBrowser": false
     }
   }
+=======
+{
+  "profiles": {
+    "rng_api_fn": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7126",
+      "launchBrowser": false
+    }
+  }
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 }

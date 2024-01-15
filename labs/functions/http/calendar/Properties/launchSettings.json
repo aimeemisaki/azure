@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "profiles": {
     "CalendarProj": {
@@ -6,4 +7,14 @@
       "launchBrowser": false
     }
   }
+=======
+{
+  "profiles": {
+    "CalendarProj": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7090",
+      "launchBrowser": false
+    }
+  }
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 }

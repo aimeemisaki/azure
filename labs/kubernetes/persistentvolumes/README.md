@@ -223,5 +223,9 @@ ___
 ## Cleanup
 
 ```
+<<<<<<< HEAD
 kubectl delete all,cm,pvc,pv -l kubernetes.azureauthority.in=persistentvolumes
+=======
+kubectl delete all,cm,pvc,pv -l kubernetes.courselabs.co=persistentvolumes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

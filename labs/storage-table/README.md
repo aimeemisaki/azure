@@ -19,9 +19,15 @@ In this lab we'll use table storage in a simple app and see how data is stored a
 Table Storage is a feature of Storage Accounts, so we'll start by creating a Resource Group and a Storage Account:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-storage-table --tags courselabs=azure -l southeastasia
 
 az storage account create -g labs-storage-table --sku Standard_LRS -l southeastasia -n <sa-name> 
+=======
+az group create -n labs-storage-table --tags courselabs=azure -l westeurope
+
+az storage account create -g labs-storage-table --sku Standard_LRS -l westeurope -n <sa-name> 
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 📋 Use the `storage table create` command to create a table in the SA called `students`.

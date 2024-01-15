@@ -27,7 +27,11 @@ Under the hood your Cosmos DB storage engine is the same whichever API you choos
 Create a Cosmos DB account with the CLI:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-cosmos-mongo --tags courselabs=azure -l southeastasia
+=======
+az group create -n labs-cosmos-mongo --tags courselabs=azure -l westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 az cosmosdb create -g labs-cosmos-mongo --enable-public-network --kind MongoDB --server-version 4.2 -n <cosmos-db-name> 
 ```

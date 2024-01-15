@@ -27,8 +27,13 @@ I see a response like this:
 
 ```
 ;; ANSWER SECTION:
+<<<<<<< HEAD
 labsvmimagees.trafficmanager.net. 60 IN CNAME   labspipn0.southeastasia.cloudapp.azure.com.
 labspipn0.southeastasia.cloudapp.azure.com. 10 IN A 52.148.241.50
+=======
+labsvmimagees.trafficmanager.net. 60 IN CNAME   labspipn0.westeurope.cloudapp.azure.com.
+labspipn0.westeurope.cloudapp.azure.com. 10 IN A 52.148.241.50
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 And if I repeat it, I see different responses to provide load balancing across the addresses.

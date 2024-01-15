@@ -37,17 +37,28 @@ First we need to create a Resource Group where the new VM resources will live. T
 _Create the group - use your own preferred location:_
 
 ```
+<<<<<<< HEAD
 az group create -n labs-vm --tags courselabs=azure -l southeastasia
+=======
+az group create -n labs-vm --tags courselabs=azure -l westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 _Find a valid (small) VM size for your subscription & region:_
 
 ```
 # with PowerShell:
+<<<<<<< HEAD
 az vm list-sizes -o table --query "[?numberOfCores<=``2`` && memoryInMb==``2048``]" --location "southeastasia"
 
 # or Bash:
 az vm list-sizes -o table --query "[?numberOfCores<=\`2\` && memoryInMb==\`2048\`]" --location "southeastasia"
+=======
+az vm list-sizes -o table --query "[?numberOfCores<=``2`` && memoryInMb==``2048``]" --location "westeurope"
+
+# or Bash:
+az vm list-sizes -o table --query "[?numberOfCores<=\`2\` && memoryInMb==\`2048\`]" --location "westeurope"
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 > JMESPath takes some getting used to. How are we filtering the list of VMs?
@@ -80,7 +91,11 @@ This will get you started:
 
 ```
 # it's good to include a size, as the default might not be available
+<<<<<<< HEAD
 az vm create -l southeastasia -g labs-vm -n vm01 --image Ubuntu2204 --size Standard_B1ms --generate-ssh-keys
+=======
+az vm create -l westeurope -g labs-vm -n vm01 --image UbuntuLTS --size Standard_A1_v2
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 </details><br/>
@@ -130,7 +145,10 @@ pip=$(az vm show -g labs-vm -n vm01 --show-details --query "publicIps" -o tsv)
 Now you can connect:
 
 ```
+<<<<<<< HEAD
 ssh-keyscan $pip > ~/.ssh/known_hosts
+=======
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ssh $pip
 ```
 </details><br/>
@@ -141,7 +159,11 @@ This is a standard Ubuntu Server VM. You can run typical commands like:
 
 - `top` to see the processes running
 - `uname -a` to see the details of the Linux build
+<<<<<<< HEAD
 - `curl https://azure.azureauthority.in` to make an HTTP request
+=======
+- `curl https://azure.courselabs.co` to make an HTTP request
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 - `exit` to leave the SSH session
 
 ## Lab

@@ -11,13 +11,21 @@ We'll be creating a few resources, so start by storing some variables we can reu
 
 ```
 # inPowerShell:
+<<<<<<< HEAD
 $location='southeastasia'
+=======
+$location='westeurope'
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 $rg='labs-iaas-apps'
 $server='<unique-dns-name>'
 $database='signup'
 
 # OR in Bash:
+<<<<<<< HEAD
 location='southeastasia'
+=======
+location='westeurope'
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 rg='labs-iaas-apps'
 server='<unique-dns-name>'
 database='signup'
@@ -122,7 +130,11 @@ Download and run the MSI to install the app:
 
 ```
 # download the package:
+<<<<<<< HEAD
 curl -o signup.msi https://github.com/azureauthority/azure/releases/download/labs-iaas-apps-1.0/SignUp-1.0.msi
+=======
+curl -o signup.msi https://github.com/courselabs/azure/releases/download/labs-iaas-apps-1.0/SignUp-1.0.msi
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 # deploy it:
 Start-Process msiexec.exe -ArgumentList '/i', 'signup.msi', '/quiet', '/norestart' -NoNewWindow -Wait

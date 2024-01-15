@@ -20,7 +20,11 @@ In this lab we'll see how to host a website on blob storage, and scale it with M
 Start by creating a Resource Group and a normal storage account:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-storage-static --tags courselabs=azure -l southeastasia
+=======
+az group create -n labs-storage-static --tags courselabs=azure -l westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 az storage account create -g labs-storage-static --sku Standard_LRS -n <sa-name>
 ```
@@ -128,7 +132,11 @@ Check the status in the Portal. Browse to `https://<cdn-domain>.azureedge.net`. 
 
 Keep refreshing. When you can see your site, that means CDN is populated and the data is being served from somewhere close to you.
 
+<<<<<<< HEAD
 📋 Change the content of the site by uploading `labs/storage-static/web2` directory to the static website container 
+=======
+📋 Change the content of the site by uploadling `labs/storage-static/web` directory to the static website container 
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 <details>
   <summary>Not sure how?</summary>

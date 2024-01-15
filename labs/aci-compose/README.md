@@ -94,7 +94,11 @@ The Compose model for the app is much simpler:
 
 - [rng-compose-v1.yml](/labs/aci-compose/rng-compose-v1.yml) - still uses the same container images, but the Compose integration takes care of some of the differences in ACI
 
+<<<<<<< HEAD
 We can deploy to ACI using a `docker compose` command, but first we need to set up a Docker Context so our local CLI is configured to talk to Azure (we covered this in the [ACI lab](/labs/aci)):
+=======
+We can deploy to ACI using a `docker compose` command, but first we need to set up a Docker Context so our local CLI is configured to talk to Azure (we covered this in the [ACI lab](/labs/aci/README.md)):
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 ```
 docker login azure
@@ -140,7 +144,11 @@ Browse to the new deployment and check the app is working. Open the container li
 Create Storage Account:
 
 ```
+<<<<<<< HEAD
 az storage account create --sku Standard_ZRS -g labs-aci-compose  -l southeastasia -n <sa-name>
+=======
+az storage account create --sku Standard_ZRS -g labs-aci-compose  -l westeurope -n <sa-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 Get the connection string:

@@ -29,7 +29,11 @@ Redis is an open-source project and different vendors package it to run on Azure
 We'll create a Redis instance in the CLI. Start with a Resource Group:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-redis --tags courselabs=azure -l southeastasia
+=======
+az group create -n labs-redis --tags courselabs=azure -l westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 Check the help text:

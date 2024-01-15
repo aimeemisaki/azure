@@ -6,7 +6,11 @@ For sensitive information Kubernetes has [Secrets](https://kubernetes.io/docs/co
 
 ## API specs
 
+<<<<<<< HEAD
 - [Secrets](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/#secret-v1-core)
+=======
+- [Secrets](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#secret-v1-core)
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 <details>
   <summary>YAML overview</summary>
@@ -179,5 +183,9 @@ ___
 ## Cleanup
 
 ```
+<<<<<<< HEAD
 kubectl delete all,cm,secret -l kubernetes.azureauthority.in=secrets
+=======
+kubectl delete all,cm,secret -l kubernetes.courselabs.co=secrets
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

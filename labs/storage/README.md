@@ -36,7 +36,11 @@ Your data is more secure with wider replication, but that comes at higher cost.
 We'll use the CLI to create a new Storage Account. Start with a Resource Group and then check the hel text for new accounts:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-storage  -l southeastasia --tags courselabs=azure
+=======
+az group create -n labs-storage  -l westeurope --tags courselabs=azure
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 az storage account create --help
 ```
@@ -53,7 +57,11 @@ The SKU parameter includes performance and redundancy settings, e.g:
 - `Standard_GRS` is standard performance (spinning HDDs) with geo redundancy
 
 ```
+<<<<<<< HEAD
 az storage account create -g labs-storage  -l southeastasia --sku Standard_ZRS -n <sa-name>
+=======
+az storage account create -g labs-storage  -l westeurope --sku Standard_ZRS -n <sa-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 </details><br/>
@@ -132,7 +140,11 @@ You can use unmanaged disks if you want to control the storage, which you can sp
 The Storage Account is the same command with a different SKU:
 
 ```
+<<<<<<< HEAD
 az storage account create -g labs-storage  -l southeastasia --sku Premium_LRS -n <disk-sa-name>
+=======
+az storage account create -g labs-storage  -l westeurope --sku Premium_LRS -n <disk-sa-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 You also need a container for the disk to be stored as a blob:
@@ -144,7 +156,11 @@ az storage container create -n vm-disks --account-name <disk-sa-name>
 Then in the VM create command, specify the SA and container:
 
 ```
+<<<<<<< HEAD
 az vm create -l southeastasia -g labs-storage -n vm04 --image UbuntuLTS --size Standard_D2as_v5  --use-unmanaged-disk --storage-container-name vm-disks --storage-account <disk-sa-name>
+=======
+az vm create -l westeurope -g labs-storage -n vm04 --image UbuntuLTS --size Standard_D2as_v5  --use-unmanaged-disk --storage-container-name vm-disks --storage-account <disk-sa-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 </details><br/>

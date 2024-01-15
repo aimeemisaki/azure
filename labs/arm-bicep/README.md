@@ -12,7 +12,10 @@ The evolution of ARM is a new tool called Bicep, which uses a custom language to
 
 - [Template schema reference](https://docs.microsoft.com/en-us/azure/templates/)
 
+<<<<<<< HEAD
 - [Bicep Playground](https://aka.ms/bicepdemo)
+=======
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 ## Bicep syntax & deployments
 
@@ -46,7 +49,11 @@ Bicep is a much friendlier language to use. You can deploy Bicep files directly 
   <summary>Not sure how?</summary>
 
 ```
+<<<<<<< HEAD
 az group create -n labs-arm-bicep  --tags courselabs=azure --location southeastasia
+=======
+az group create -n labs-arm-bicep  --tags courselabs=azure --location westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 This will request parameter values from the CLI:

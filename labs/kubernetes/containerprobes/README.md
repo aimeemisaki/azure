@@ -183,5 +183,9 @@ ___
 ## Cleanup
 
 ```
+<<<<<<< HEAD
 kubectl delete all -l kubernetes.azureauthority.in=containerprobes
+=======
+kubectl delete all -l kubernetes.courselabs.co=containerprobes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

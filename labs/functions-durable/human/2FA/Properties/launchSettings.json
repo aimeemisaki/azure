@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "profiles": {
     "_2FA": {
@@ -6,4 +7,14 @@
       "launchBrowser": false
     }
   }
+=======
+{
+  "profiles": {
+    "_2FA": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7149",
+      "launchBrowser": false
+    }
+  }
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 }

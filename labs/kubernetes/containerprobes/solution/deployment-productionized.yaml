@@ -3,7 +3,11 @@ kind: Deployment
 metadata:
   name: rngapi
   labels: 
+<<<<<<< HEAD
     kubernetes.azureauthority.in: containerprobes
+=======
+    kubernetes.courselabs.co: containerprobes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   replicas: 5
   selector:

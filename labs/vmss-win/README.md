@@ -48,7 +48,11 @@ You need to specify the VM SKU, instance count, backend port, image and admin cr
 
 ```
 # choose your own VM size and location:
+<<<<<<< HEAD
 az vmss create -n vmss-app01 -g labs-vmss-win --vm-sku Standard_D2s_v5 --instance-count 3 --backend-port 3389 --image app01-image --admin-username labs --admin-password '<strong-password>' -l southeastasia
+=======
+az vmss create -n vmss-app01 -g labs-vmss-win --vm-sku Standard_D2s_v5 --instance-count 3 --backend-port 3389 --image app01-image --admin-username labs --admin-password '<strong-password>' -l westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 </details><br/>

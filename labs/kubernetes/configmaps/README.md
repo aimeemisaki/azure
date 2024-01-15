@@ -98,7 +98,11 @@ The demo app for this lab has the logic to merge config from multiple sources.
 Defaults are built into the `appsettings.json` file inside the Docker image - run a Pod with no config applied to see the defaults:
 
 ```
+<<<<<<< HEAD
 kubectl run configurable --image=sixeyed/configurable:21.04 --labels='kubernetes.azureauthority.in=configmaps'
+=======
+kubectl run configurable --image=sixeyed/configurable:21.04 --labels='kubernetes.courselabs.co=configmaps'
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 kubectl wait --for=condition=Ready pod configurable
 
@@ -251,5 +255,9 @@ ___
 Cleanup by removing objects with this lab's label:
 
 ```
+<<<<<<< HEAD
 kubectl delete configmap,deploy,svc,pod -l kubernetes.azureauthority.in=configmaps
+=======
+kubectl delete configmap,deploy,svc,pod -l kubernetes.courselabs.co=configmaps
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

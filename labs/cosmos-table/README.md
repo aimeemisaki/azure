@@ -25,7 +25,11 @@ Create a new resource in the Portal - search for "cosmos", create a new CosmosDB
 Create a Cosmos DB account with the CLI:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-cosmos-table  --tags courselabs=azure -l southeastasia
+=======
+az group create -n labs-cosmos-table  --tags courselabs=azure -l westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 az cosmosdb create --help
 
@@ -67,7 +71,11 @@ The app's logging configuration is set here:
 Start by creating a Storage Account and Table which will be the "legacy" data store:
 
 ```
+<<<<<<< HEAD
 az storage account create -g labs-cosmos-table --sku Standard_LRS -l southeastasia -n <sa-name>
+=======
+az storage account create -g labs-cosmos-table --sku Standard_LRS -l westeurope -n <sa-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 az storage table create -n FulfilmentLogs --account-name <sa-name>
 ```

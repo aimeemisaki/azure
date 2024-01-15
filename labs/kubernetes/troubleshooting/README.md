@@ -26,5 +26,9 @@ ___
 When you're done you can remove all the objects:
 
 ```
+<<<<<<< HEAD
 kubectl delete all -l kubernetes.azureauthority.in=troubleshooting
+=======
+kubectl delete all -l kubernetes.courselabs.co=troubleshooting
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

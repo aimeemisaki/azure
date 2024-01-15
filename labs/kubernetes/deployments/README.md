@@ -220,5 +220,9 @@ ___
 Cleanup by removing objects with this lab's label:
 
 ```
+<<<<<<< HEAD
 kubectl delete deploy,svc -l kubernetes.azureauthority.in=deployments
+=======
+kubectl delete deploy,svc -l kubernetes.courselabs.co=deployments
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

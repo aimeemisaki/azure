@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "profiles": {
     "TodoList_Functions": {
@@ -6,4 +7,14 @@
       "launchBrowser": false
     }
   }
+=======
+{
+  "profiles": {
+    "TodoList_Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7177",
+      "launchBrowser": false
+    }
+  }
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 }

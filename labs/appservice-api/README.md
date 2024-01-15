@@ -26,7 +26,11 @@ We'll start with the REST API. It's a random number generator, so when we get it
 The RG is the usual command:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-appservice-api --tags courselabs=azure -l southeastasia 
+=======
+az group create -n labs-appservice-api --tags courselabs=azure -l westeurope 
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 For the App Service Plan, print the help text to see the options:

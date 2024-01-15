@@ -25,7 +25,11 @@ az storage share-rm create -n labs-premium --quota 100 --access-tier Premium --s
 So create a new SA - needs to be Premium SKU & flagged for file storage:
 
 ```
+<<<<<<< HEAD
 az storage account create -g labs-storage-files  -l southeastasia --sku Premium_LRS --kind FileStorage -n <premium-sa-name>
+=======
+az storage account create -g labs-storage-files  -l westeurope --sku Premium_LRS --kind FileStorage -n <premium-sa-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 az storage share-rm create -n labs-premium --quota 100 --access-tier Premium --storage-account <premium-sa-name>
 ```

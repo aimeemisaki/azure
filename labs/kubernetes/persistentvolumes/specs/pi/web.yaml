@@ -3,7 +3,11 @@ kind: Service
 metadata:
   name: pi-web-internal
   labels: 
+<<<<<<< HEAD
     kubernetes.azureauthority.in: persistentvolumes
+=======
+    kubernetes.courselabs.co: persistentvolumes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
     app: pi-web
 spec:
   ports:
@@ -19,7 +23,11 @@ metadata:
   name: pi-web
   labels:
     app: pi-web
+<<<<<<< HEAD
     kubernetes.azureauthority.in: persistentvolumes
+=======
+    kubernetes.courselabs.co: persistentvolumes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   selector:
     matchLabels:

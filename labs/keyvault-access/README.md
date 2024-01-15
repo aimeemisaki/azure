@@ -34,7 +34,11 @@ az keyvault secret show --name secret01 -o tsv --query "value" --vault-name <kv-
 
 You created the account so you have all permissions. Open the Key Vault in the Portal and you can see how the permissions are defined in the _Access policies_ tab.
 
+<<<<<<< HEAD
 📋 Can you give me access to your Key Vault, so I can list and read secrets using my account `siddheshpg@azureauthority.in`?
+=======
+📋 Can you give me access to your Key Vault, so I can list and read secrets using my account `elton@sixeyed.com`?
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 <details>
   <summary>Not sure how?</summary>
@@ -151,7 +155,11 @@ When the VM is ready, connect and try the Python script:
 ssh <vm-public-ip>
 
 # download the Python script:
+<<<<<<< HEAD
 curl -o read-secret.py https://raw.githubusercontent.com/azureauthority/azure/main/labs/keyvault-access/scripts/read-secret.py
+=======
+curl -o read-secret.py https://raw.githubusercontent.com/courselabs/azure/main/labs/keyvault-access/scripts/read-secret.py
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 # and run it - this will fail:
 python3 read-secret.py

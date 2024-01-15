@@ -31,7 +31,11 @@ docker-compose up --help
 
 Docker can run any kind of app - the container image could be for a lightweight microservice or a legacy monolith. They all work in the same way, but containers are especially well suited to distributed applications, where each component runs in a separate container.
 
+<<<<<<< HEAD
 Try running a sample app - this is the web component for the random number generator we used in the [distributed App Service lab](/labs/appservice-api):
+=======
+Try running a sample app - this is the web component for the random number generator we used in the [distributed App Service lab](/labs/appservice-api/README.md):
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 ```
 docker run -d -p 8088:80 --name rng-web courselabs/rng-web:21.05

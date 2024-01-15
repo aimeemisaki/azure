@@ -8,7 +8,11 @@ These are hands-on resources to help you learn Azure.
  - [Set up the AZ command line, Git and Docker](./setup/README.md) 
  - Download your repo
     - Open a terminal (PowerShell on Windows; any shell on Linux/macOS) 
+<<<<<<< HEAD
     - Run: `git clone https://github.com/azureauthority/azure.git`
+=======
+    - Run: `git clone https://github.com/courselabs/azure.git`
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
      - Open the folder: `cd azure`
 - _Optional_
     - Install [Visual Studio Code](https://code.visualstudio.com) (free - Windows, macOS and Linux) to browse the repo and documentation
@@ -127,7 +131,11 @@ _AKS Integration_
 
 _Project_
 
+<<<<<<< HEAD
 - [Project 3: Containerized App](/projects/containerized/README.md)
+=======
+- [Project 3: Containerized App](/projects/conatinerized/README.md)
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 ## Serverless and App Management
 
@@ -175,7 +183,13 @@ _Project_
 
 Created by [@EltonStoneman](https://twitter.com/EltonStoneman) ([sixeyed](https://github.com/sixeyed)): Freelance Consultant and Trainer. Author of [Learn Docker in a Month of Lunches](https://www.manning.com/books/learn-docker-in-a-month-of-lunches), [Learn Kubernetes in a Month of Lunches](https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches) and [many Pluralsight courses](https://pluralsight.pxf.io/c/1197078/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fauthors%2Felton-stoneman).
 
+<<<<<<< HEAD
 Updated by Siddhesh Prabhugaonkar ([@SiddheshP](https://github.com/siddheshp)): Freelance Microsoft Certified Trainer. Connect on [LinkedIn](https://www.linkedin.com/in/siddheshprabhugaonkar) or subscribe to newsletter [Azure Authority](https://azureauthority.substack.com)
 
 Photo by <a href="https://unsplash.com/@_bahador?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bahador</a> on <a href="https://unsplash.com/s/photos/cloud?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+=======
+
+Photo by <a href="https://unsplash.com/@_bahador?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bahador</a> on <a href="https://unsplash.com/s/photos/cloud?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552

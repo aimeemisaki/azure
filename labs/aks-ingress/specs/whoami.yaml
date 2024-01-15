@@ -3,7 +3,11 @@ kind: Service
 metadata:
   name: whoami-internal
   labels:
+<<<<<<< HEAD
     kubernetes.azureauthority.in: ingress
+=======
+    kubernetes.courselabs.co: ingress
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   selector:
     app: whoami
@@ -18,7 +22,11 @@ kind: Deployment
 metadata:
   name: whoami
   labels:
+<<<<<<< HEAD
     kubernetes.azureauthority.in: ingress
+=======
+    kubernetes.courselabs.co: ingress
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   replicas: 10
   selector:

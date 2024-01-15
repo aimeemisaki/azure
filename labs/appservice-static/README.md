@@ -20,7 +20,11 @@ In this lab we'll see how to create a static web app from a GitHub repo, and als
 
 You'll need a GitHub account for this exercise (they're free - you can [sign up here](https://github.com/signup)). Log in and browse to create a fork of the course repo: 
 
+<<<<<<< HEAD
 - https://github.com/azureauthority/azure/fork
+=======
+- https://github.com/courselabs/azure/fork
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 Confim by clicking _Create fork_:
 
@@ -44,7 +48,11 @@ This is the repo your static web app will be deployed from.
 The RG is easy - use your own choice of location:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-appservice-static  -l southeastasia --tags courselabs=azure
+=======
+az group create -n labs-appservice-static  -l westeurope --tags courselabs=azure
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 Check the help text for creating a static web app:

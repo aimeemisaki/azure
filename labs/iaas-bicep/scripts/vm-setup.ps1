@@ -11,7 +11,11 @@ Write-Output '** Installing Windows features'
 Install-WindowsFeature Web-Server,NET-Framework-45-ASPNET,Web-Asp-Net45
 
 Write-Output '** Downloading app MSI'
+<<<<<<< HEAD
 curl -o signup.msi https://github.com/azureauthority/azure/releases/download/1.0/SignUp-1.0.msi
+=======
+curl -o signup.msi https://github.com/courselabs/azure/releases/download/labs-iaas-apps-1.0/SignUp-1.0.msi
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 Write-Output '** Installing app'
 Start-Process msiexec.exe -ArgumentList '/i', 'signup.msi', '/quiet', '/norestart' -NoNewWindow -Wait

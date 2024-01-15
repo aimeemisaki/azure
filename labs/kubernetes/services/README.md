@@ -226,10 +226,18 @@ What happens? How can you find the target Pods for a Service?
 ___
 ## Cleanup
 
+<<<<<<< HEAD
 Every YAML spec for this lab adds a label `kubernetes.azureauthority.in=services` .
+=======
+Every YAML spec for this lab adds a label `kubernetes.courselabs.co=services` .
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 That makes it super easy to clean up, by deleting all those resources:
 
 ```
+<<<<<<< HEAD
 kubectl delete pod,svc -l kubernetes.azureauthority.in=services
+=======
+kubectl delete pod,svc -l kubernetes.courselabs.co=services
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

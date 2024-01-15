@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 using System.IO;
 using System.Text.Json;
@@ -31,3 +32,38 @@ namespace ChainedFunctions
         }
     }
 }
+=======
+using System;
+using System.IO;
+using System.Text.Json;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Extensions.Logging;
+using Microsoft.Azure.WebJobs.Extensions.Storage.Blobs;
+
+namespace ChainedFunctions
+{
+    public class Hearbeat
+    {
+        [FunctionName("Heartbeat")]
+        [StorageAccount("StorageConnectionString")]
+        public void Run(
+            [TimerTrigger("0 */2 * * * *")]TimerInfo myTimer,         
+            [Blob("heartbeat/{DateTime}.json", FileAccess.Write)] out string blobOutput, 
+            ILogger log)
+        {
+            var status = new {
+                Component = "save-handler",
+                Version = "1.0.1.0",
+                TimestampUtc = DateTime.UtcNow,
+                StatusCode = 200,
+                StatusMessage = "OK"
+            };
+
+            log.LogInformation($"Writing status for: {status.Component}; at: {DateTime.UtcNow} (UTC)");
+
+            blobOutput = JsonSerializer.Serialize(status);
+        }
+    }
+}
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552

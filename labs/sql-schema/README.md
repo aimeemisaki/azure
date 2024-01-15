@@ -18,13 +18,21 @@ Start by creating a SQL Server we can use for a new database. We'll be using the
 
 ```
 # set some variables - PowerShell:
+<<<<<<< HEAD
 $location='southeastasia'
+=======
+$location='westeurope'
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 $rg='labs-sql-schema'
 $server='<unique-server-dns-name>'
 $database='assets-db'
 
 # OR Bash:
+<<<<<<< HEAD
 location='southeastasia'
+=======
+location='westeurope'
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 rg='labs-sql-schema'
 server='<unique-server-dns-name>'
 database='assets-db'
@@ -168,6 +176,7 @@ Insert some data into the assets table:
 
 ```
 INSERT INTO [dbo].[Assets] (AssetTypeId, LocationId, AssetDescription)
+<<<<<<< HEAD
 VALUES (1, 1, 'Siddhesh''s MacBook Air')
 
 INSERT INTO [dbo].[Assets] (AssetTypeId, LocationId, AssetDescription)
@@ -175,6 +184,15 @@ VALUES (2, 2, 'Siddhesh''s Mac Studio')
 
 INSERT INTO [dbo].[Assets] (AssetTypeId, LocationId, AssetDescription)
 VALUES (3, 2, 'Siddhesh''s iPhone')
+=======
+VALUES (1, 1, 'Elton''s MacBook Air')
+
+INSERT INTO [dbo].[Assets] (AssetTypeId, LocationId, AssetDescription)
+VALUES (2, 2, 'Elton''s Mac Studio')
+
+INSERT INTO [dbo].[Assets] (AssetTypeId, LocationId, AssetDescription)
+VALUES (3, 2, 'Elton''s iPhone')
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 This is additional data, not present in the original Bacpac. Export a Bacpac from the Azure database. How would you use that file to recreate the data in another instance.

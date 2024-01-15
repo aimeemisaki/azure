@@ -26,9 +26,15 @@ We explored blob storage using the Portal in [Storage Account lab](/labs/storage
 Remember the SA name can only be lowercase letters and numbers:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-storage-blob --tags courselabs=azure -l southeastasia 
 
 az storage account create -g labs-storage-blob  -l southeastasia --sku Standard_LRS -n <sa-name>
+=======
+az group create -n labs-storage-blob --tags courselabs=azure -l westeurope 
+
+az storage account create -g labs-storage-blob  -l westeurope --sku Standard_LRS -n <sa-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 </details><br/>

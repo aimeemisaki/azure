@@ -3,7 +3,11 @@ kind: Service
 metadata:
   name: pi-proxy-lb
   labels: 
+<<<<<<< HEAD
     kubernetes.azureauthority.in: persistentvolumes
+=======
+    kubernetes.courselabs.co: persistentvolumes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
     app: pi-proxy
 spec:
   ports:
@@ -20,7 +24,11 @@ metadata:
   name: pi-proxy-np
   labels:
     app: pi-proxy
+<<<<<<< HEAD
     kubernetes.azureauthority.in: persistentvolumes
+=======
+    kubernetes.courselabs.co: persistentvolumes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   ports:
     - port: 8010   
@@ -37,7 +45,11 @@ metadata:
   name: pi-proxy
   labels:
     app: pi-proxy
+<<<<<<< HEAD
     kubernetes.azureauthority.in: persistentvolumes
+=======
+    kubernetes.courselabs.co: persistentvolumes
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   selector:
     matchLabels:

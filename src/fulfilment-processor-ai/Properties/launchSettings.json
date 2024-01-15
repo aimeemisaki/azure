@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿{
   "profiles": {
     "FulfilmentProcessor": {
@@ -9,3 +10,16 @@
     }
   }
 }
+=======
+﻿{
+  "profiles": {
+    "FulfilmentProcessor": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552

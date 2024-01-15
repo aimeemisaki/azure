@@ -28,7 +28,11 @@ It's worth taking some time to look at this Bicep file. It's small enough to be 
 This is straightforward - a `group create` and a `deployment group create`:
 
 ```
+<<<<<<< HEAD
 az group create -n labs-iaas-bicep --tags courselabs=azure -l southeastasia 
+=======
+az group create -n labs-iaas-bicep --tags courselabs=azure -l westeurope 
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 az deployment group create -g labs-iaas-bicep --name core --template-file labs/iaas-bicep/templates/core.bicep
 ```
@@ -100,7 +104,11 @@ az sql server vnet-rule list -g labs-iaas-bicep --server <sql-server>
 
 ## Windows Application VM
 
+<<<<<<< HEAD
 The final Bicep file for this application defines the Windows Server VM. The application we'll be deploying is the same one as the [IaaS apps lab](/labs/iaas-apps), but all the steps are automated here:
+=======
+The final Bicep file for this application defines the Windows Server VM. The application we'll be deploying is the same one as the [IaaS apps lab](/labs/iaas-apps/README.md), but all the steps are automated here:
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 - [templates/vm.bicep](/labs/iaas-bicep/templates/vm.bicep) - includes the VM and the resources it needs - the NIC and PIP, with references to the Core resources via the shared JSON variables file
 

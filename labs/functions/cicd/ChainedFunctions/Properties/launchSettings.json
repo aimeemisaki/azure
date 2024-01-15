@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "profiles": {
     "ChainedFunctions": {
@@ -6,4 +7,14 @@
       "launchBrowser": false
     }
   }
+=======
+{
+  "profiles": {
+    "ChainedFunctions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7245",
+      "launchBrowser": false
+    }
+  }
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 }

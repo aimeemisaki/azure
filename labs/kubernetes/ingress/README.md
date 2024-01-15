@@ -226,5 +226,9 @@ ___
 ## Cleanup
 
 ```
+<<<<<<< HEAD
 kubectl delete all,secret,ingress,clusterrolebinding,clusterrole,ns,ingressclass -l kubernetes.azureauthority.in=ingress
+=======
+kubectl delete all,secret,ingress,clusterrolebinding,clusterrole,ns,ingressclass -l kubernetes.courselabs.co=ingress
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```

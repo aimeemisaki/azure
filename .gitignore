@@ -1,5 +1,9 @@
 **/.DS_Store
 **/.azure
+<<<<<<< HEAD
+=======
+labs/arm-bicep/vm-simple-linux/azuredeploy.bicep
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 **/bin
 **/obj
 download*.*
@@ -12,6 +16,7 @@ instructor.md
 projects/containerized/kubernetes/
 **/.vscode/extensions.json
 labs/functions/http/lab/
+<<<<<<< HEAD
 secrets.json
 src/rng/.vs/Numbers/v17/.suo
 src/rng/.vs/Numbers/FileContentIndex/read.lock
@@ -67,3 +72,6 @@ src/eventhubs/producer/.vs/producer/v17/.suo
 src/pi/.vs/pi/FileContentIndex/f273b6b3-4d5d-4b87-be1b-ecdc8b3f07db.vsidx
 src/pi/.vs/pi/FileContentIndex/read.lock
 src/pi/.vs/pi/v17/.suo
+=======
+secrets.json
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552

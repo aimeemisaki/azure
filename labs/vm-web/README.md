@@ -29,7 +29,11 @@ First we need to create a Resource Group where the new VM resources will live. T
 _Create the group - use your own preferred location:_
 
 ```
+<<<<<<< HEAD
 az group create -n labs-vm-web --tags courselabs=azure -l southeastasia
+=======
+az group create -n labs-vm-web --tags courselabs=azure -l westeurope
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 📋 Create an Ubuntu Server VM using the CLI. Specify a unique public DNS name to access the VM.  
@@ -48,7 +52,11 @@ There's a parameter called `public-ip-address-dns-name` which you can use to set
 
 ```
 # remember to use a size which is available to you:
+<<<<<<< HEAD
 az vm create -l southeastasia -g labs-vm-web -n vm01 --image Ubuntu2204 --size Standard_B1ms --generate-ssh-keys --public-ip-address-dns-name <your-dns-name> 
+=======
+az vm create -l westeurope -g labs-vm-web -n vm01 --image UbuntuLTS --size Standard_A1_v2 --public-ip-address-dns-name <your-dns-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 </details><br/>
@@ -64,6 +72,7 @@ az network public-ip list -o table -g labs-vm-web
 📋 Print the details of the PIP used by the VM to see the FQDN - fully qualified domain name.  
 
 <details>
+<<<<<<< HEAD
   <summary>
     Not sure how?
   </summary>
@@ -71,20 +80,35 @@ az network public-ip list -o table -g labs-vm-web
 ```
 az network public-ip show -g labs-vm-web -n <your-pip-name> -o json
 az network public-ip show -g labs-vm -n <your-pip-name> --query "{fqdn: dnsSettings.fqdn,address: ipAddress}"
+=======
+  <summary>Not sure how?</summary>
+
+```
+az network public-ip show -g labs-vm-web -n <your-pip-name>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ```
 
 </details><br/>
 
+<<<<<<< HEAD
 > The FQDN will be in the format `[vm-name].[region].cloudapp.azure.com`, e.g. mine is `azureauth-web.southeastasia.cloudapp.azure.com`
 
 You can use the FQDN to connect to the VM - it will remain constant even if the actual IP address changes.
+=======
+> The FQDN will be in the format `[vm-name].[region].cloudapp.azure.com`, e.g. mine is `courselabs-vm-web.westeurope.cloudapp.azure.com`
+
+You can use the FQDN to connect to the VM - it will remain constant if the actual IP address changes.
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 ## Install a web server on the VM
 
 Connect to your VM using SSH and your DNS name:
 
 ```
+<<<<<<< HEAD
 ssh-keyscan <Public IP of VM> > ~/.ssh/known_hosts
+=======
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 ssh <your-fqdn>
 ```
 
@@ -106,9 +130,13 @@ When you're troubleshooting, the Portal can often be more useful than the CLI.
 📋 Browse to the Portal and find the NSG for your VM. Change the configuration to allow inbound traffic on port 80.
 
 <details>
+<<<<<<< HEAD
   <summary>
     Not sure how?
   </summary>
+=======
+  <summary>Not sure how?</summary>
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 
 Find your Resource Group in the portal and open the NSG - it will be called `[vm-name]NSG`:
 

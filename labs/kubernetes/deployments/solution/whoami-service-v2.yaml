@@ -3,7 +3,11 @@ kind: Service
 metadata:
   name: whoami-lab-np
   labels:
+<<<<<<< HEAD
     kubernetes.azureauthority.in: deployments
+=======
+    kubernetes.courselabs.co: deployments
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   selector:
     app: whoami-lab
@@ -20,7 +24,11 @@ kind: Service
 metadata:
   name: whoami-lab-lb
   labels:
+<<<<<<< HEAD
     kubernetes.azureauthority.in: deployments
+=======
+    kubernetes.courselabs.co: deployments
+>>>>>>> 294ba0192c4d7be6084b7914be1fecee6edd1552
 spec:
   selector:
     app: whoami-lab
